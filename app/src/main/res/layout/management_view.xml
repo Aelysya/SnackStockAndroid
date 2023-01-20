@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/utilityPart"
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        android:background="@drawable/div_left_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/div_bottom_border"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/add_product_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/add_product_text"
+                android:textAlignment="center"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/name_add_product"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/quantity_add_product"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/type_add_product"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/price_add_product"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <Button
+                android:id="@+id/add_product_button"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/add_product_button_text"
+                android:textColor="@color/click_green"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPrice" />
+
+            <Button
+                android:id="@+id/cancel_product_button"
+                android:layout_width="170dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/button_background"
+                android:text="@string/cancel_button_text"
+                android:textColor="@color/click_green"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPrice" />
+
+            <EditText
+                android:id="@+id/add_product_name"
+                android:layout_width="275dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:hint="@string/name_add_product_hint"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintBottom_toTopOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text" />
+
+            <EditText
+                android:id="@+id/add_product_quantity"
+                android:layout_width="275dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="-7dp"
+                android:layout_marginEnd="50dp"
+                android:ems="10"
+                android:hint="@string/quantity_add_product_hint"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_name" />
+
+            <EditText
+                android:id="@+id/add_product_price"
+                android:layout_width="275dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="-7dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="7dp"
+                android:ems="10"
+                android:hint="@string/price_add_product_hint"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/hint_color"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/add_product_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_type" />
+
+            <Spinner
+                android:id="@+id/add_product_type"
+                android:layout_width="275dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="-7dp"
+                android:layout_marginEnd="50dp"
+                android:contentDescription="@string/type"
+                app:layout_constraintBottom_toTopOf="@+id/textPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_quantity" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <TextView
+                android:id="@+id/add_product_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/title_low_right"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/period_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="100dp"
+                android:text="@string/default_price_text"
+                android:textColor="@color/click_black"
+                android:textSize="35sp"
+                app:layout_constraintEnd_toStartOf="@+id/calc_period_price_button"
+                app:layout_constraintTop_toBottomOf="@+id/from_date_field" />
+
+            <TextView
+                android:id="@+id/add_product_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/du"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text2" />
+
+            <TextView
+                android:id="@+id/add_product_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/au"
+                android:textColor="@color/click_black"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/from_date_field"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text2" />
+
+            <EditText
+                android:id="@+id/from_date_field"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="@string/date_hint"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintStart_toEndOf="@+id/add_product_text3"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text2"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+
+            <EditText
+                android:id="@+id/to_date_field"
+                android:layout_width="175dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:ems="10"
+                android:hint="@string/date_hint"
+                android:importantForAutofill="no"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textColorHint="@color/hint_color"
+                app:layout_constraintStart_toEndOf="@+id/add_product_text4"
+                app:layout_constraintTop_toBottomOf="@+id/add_product_text2" />
+
+            <Button
+                android:id="@+id/calc_period_price_button"
+                android:layout_width="175dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background"
+                android:text="@string/calculer_button_text"
+                android:textColor="@color/click_green"
+                android:textSize="25sp"
+                app:layout_constraintStart_toEndOf="@+id/add_product_text4"
+                app:layout_constraintTop_toBottomOf="@+id/to_date_field" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/managementPart"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/div_top_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/utilityPart"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/management_button"
+            android:layout_width="500dp"
+            android:layout_height="110dp"
+            android:background="@drawable/button_background"
+            android:text="@string/quit_management_button_text"
+            android:textColor="@color/click_green"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabsPart"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/div_bottom_border"
+        app:layout_constraintEnd_toStartOf="@+id/utilityPart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/snack_button"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/snack_button_text"
+            android:textColor="@color/click_green"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/boisson_button"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/boisson_button_text"
+            android:textColor="@color/click_green"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/snack_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/ventes_button"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/ventes_button_text"
+            android:textColor="@color/click_green"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/autre_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/autre_button"
+            android:layout_width="170dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            android:text="@string/autre_button_text"
+            android:textColor="@color/click_green"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/boisson_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/stockItemsDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/div_top_border"
+        android:divider="@color/click_black"
+        android:dividerHeight="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/managementPart"
+        app:layout_constraintEnd_toStartOf="@+id/utilityPart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/utilityPart"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabsPart">
+
+        <TextView
+            android:id="@+id/currentTabText"
+            android:layout_width="487dp"
+            android:layout_height="50dp"
+            android:text="@string/default_current_tab_text"
+            android:textAlignment="center"
+            android:textColor="@color/click_black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
