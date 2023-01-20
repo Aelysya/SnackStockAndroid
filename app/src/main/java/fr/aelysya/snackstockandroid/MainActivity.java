@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 String enteredPassword = passwordField.getText().toString();
                 if(enteredPassword.equals(Stock.getMdp())){
                     Intent newIntent = new Intent(MainActivity.this, ManagementActivity.class);
-                    MainActivity.this.startActivity(newIntent);
+                    startActivity(newIntent);
                     finish();
                     popupWindow.dismiss();
                 } else {

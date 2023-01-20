@@ -133,8 +133,14 @@ public class Stock {
         return autresList;
     }
 
+    /**
+     * Recherche la quantité en stock d'un objet
+     * @param name Nom de l'objet recherché
+     * @param type Type de l'objet recherché
+     * @return La quantité de l'objet recherché
+     */
     public static int getItemQuantityFromName(String name, String type){
-        int qty = -1;
+        int qty = 0;
         for(Item i : getListFromTypeString(type)) {
             if (i.getNAME().equals(name)) {
                 qty = i.getQuantity();

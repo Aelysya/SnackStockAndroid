@@ -109,7 +109,7 @@ public class ManagementActivity extends AppCompatActivity {
 
         managementButton.setOnClickListener(view -> {
             Intent newIntent = new Intent(ManagementActivity.this, MainActivity.class);
-            ManagementActivity.this.startActivity(newIntent);
+            startActivity(newIntent);
             finish();
         });
 
