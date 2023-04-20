@@ -204,11 +204,11 @@ public class ManagementActivity extends AppCompatActivity {
         while((row = reader.readNext()) != null){
             String[] data = row[0].split(", ");
             l = data.length;
-            rowDate = df.parse(data[l-2].substring(6));
-            isHelloAsso = data[l-5].substring(11).equals("1");
+            rowDate = df.parse(data[l-2]);
+            isHelloAsso = data[l-5].equals("1");
             System.out.println(isHelloAsso);
             if((rowDate.after(fromLimit) || rowDate.equals(fromLimit)) && (rowDate.before(toLimit) || rowDate.equals(toLimit)) && !isHelloAsso){
-                StringPrice = data[l-1].substring(12);
+                StringPrice = data[l-1];
                 finalPrice += Double.parseDouble(StringPrice);
             }
         }
@@ -299,12 +299,12 @@ public class ManagementActivity extends AppCompatActivity {
                 String[] saleData = new String[6];
                 String[] data = row[0].split(", ");
                 l = data.length;
-                saleData[0] = getSalerNameFromId(data[0].substring(9));
-                saleData[1] = data[l-2].substring(6);
-                saleData[2] = data[l-1].substring(12);
-                saleData[3] = data[l-4].substring(25);
-                saleData[4] = data[l-3].substring(16);
-                saleData[5] = data[l-5].substring(11);
+                saleData[0] = getSalerNameFromId(data[0]);
+                saleData[1] = data[l-2];
+                saleData[2] = data[l-1];
+                saleData[3] = data[l-4];
+                saleData[4] = data[l-3];
+                saleData[5] = data[l-5];
                 saleList.add(saleData);
             }
         } catch (IOException e) {

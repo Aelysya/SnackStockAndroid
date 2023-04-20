@@ -84,7 +84,7 @@ public class Cart {
     public static String[] getContentToStringArray(String freeConso, String freeMenu, String price, char id, boolean isHelloAsso){
         StringBuilder s = new StringBuilder();
 
-        s.append("Vendeur: ").append(id).append(", ");
+        s.append(id).append(", ");
 
         for(Item i : snacksList){
             s.append(i.getNAME()).append(": ");
@@ -101,14 +101,14 @@ public class Cart {
             s.append(i.getQuantity()).append(", ");
         }
 
-        s.append("HelloAsso: ").append(isHelloAsso ? "1" : "0").append(", ");
+        s.append(isHelloAsso ? "1" : "0").append(", ");
 
-        s.append("consommations gratuites: ").append(freeConso).append(", ");
-        s.append("menus gratuits: ").append(freeMenu).append(", ");
+        s.append(freeConso).append(", ");
+        s.append(freeMenu).append(", ");
 
         String date = String.valueOf(java.time.LocalDate.now());
-        s.append("date: ").append(date).append(", ");
-        s.append("prix total: ").append(price, 0, price.length()-2);
+        s.append(date).append(", ");
+        s.append(price, 0, price.length()-2);
 
         return new String[]{s.toString()};
     }

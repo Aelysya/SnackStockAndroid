@@ -82,9 +82,9 @@ public class ManagementStockListAdapter extends BaseAdapter {
         holder.removeButton.setOnClickListener(view ->{
             if(i.getQuantity() - 1 >= 0){
                 Stock.removeQuantityFromItem(i, 1);
-                holder.itemQuantity.setText(Integer.toString(i.getQuantity() - 1));
+                holder.itemQuantity.setText(Integer.toString(i.getQuantity()));
             }
-            activity.showTab(i.getTYPE());
+            //activity.showTab(i.getTYPE());
 
             try {
                 activity.updateStockFile();
@@ -95,7 +95,8 @@ public class ManagementStockListAdapter extends BaseAdapter {
 
         holder.addButton.setOnClickListener(view ->{
             Stock.addOneToItem(i);
-            activity.showTab(i.getTYPE());
+            holder.itemQuantity.setText(Integer.toString(i.getQuantity()));
+            //activity.showTab(i.getTYPE());
             try {
                 activity.updateStockFile();
             } catch (IOException e) {

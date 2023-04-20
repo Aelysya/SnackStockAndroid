@@ -69,7 +69,7 @@ public class SalesListAdapter extends BaseAdapter {
         holder.salerName.setText(sale[0]);
         holder.saleDate.setText(sale[1]);
         holder.salePrice.setText(sale[2]);
-        holder.saleType.setText(sale[5].equals("0") ? "CB" : "HA");
+        holder.saleType.setText(sale[5].equals("0") ? "E" : "HA");
 
         return convertView;
     }
